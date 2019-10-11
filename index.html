@@ -1,0 +1,80 @@
+<!Doctype html>
+<html lang = "pt-br">
+<head>
+    <title>Cronômetro</title>
+    <meta charset="UTF-8"/>
+    <link rel = "stylesheet" type = "text/css" href = "_css/estilo.css"/>
+</head>
+<body>
+
+<div id = "caixaPrincipal">
+    <div class = "blocoSuperior fundoCinza">
+        <div id = "tagPararAlarme" class = "eleDesativado">X</div>
+        <span id = "tagTxtPararAlarme">Parar Alarme</span>
+    </div>
+
+    <div class = "blocoPadrao">
+        <fieldset>
+            <legend><span id = "tagTxtModo">Modo</span></legend>
+                <label class = "fundoCinza2"><input type = "radio" name = "opcTmp" value = "0"  /><span id = "tagTxtAlarme">Alarme</span></label>
+                <label class = "fundoCinza2"><input type = "radio" name = "opcTmp" value = "1"  /><span id = "tagTxtTimer">Timer</span></label>    
+            </fieldset>
+    </div>
+  
+    <div class = "blocoPadrao">
+        <fieldset>
+            <legend><span id = "tagTxtAcao">Ação</span></legend>
+               <label class = "fundoCinza2"><input type = "radio" name = "acaoAlarme" value = "0"  /><span id = "tagTxtSom">Reproduzir Som</span></label>
+               <label class = "fundoCinza2"><input type = "radio" name = "acaoAlarme" value = "1"  /><span id = "tagTxtJanela">Abrir Janela</span></label>    
+        </fieldset>
+    </div>
+
+<div id = "dvTagsTempo" class = "blocoSuperior">
+    <fieldset>
+        <legend>Horas</legend>    
+        <input id = "tagTmpHor" class = "styleImputTmp" type = "number" min = "0" value = "0" required />
+    </fieldset>
+
+    <fieldset>
+        <legend>Minutos</legend>    
+        <input id = "tagTmpMin" class = "styleImputTmp" type = "number" min = "0" value = "0" max = "59" required />
+    </fieldset>
+
+    <fieldset>
+        <legend>Segundos</legend>   
+        <input id = "tagTmpSeg" class = "styleImputTmp" type = "number" min = "0" value = "0" max = "59" required />
+    </fieldset>
+</div>
+
+
+<div id = "CaixaCronometro">
+    <div class = "blocoSuperior">   
+        <span id = "tagTmpAtual">00:00:00</span>  
+    </div>
+
+<div class = "blocoSuperior">
+    <button class = "btCrono" id = "tagBtIniciaCrono">Iniciar</button>
+    <button class = "btCrono ghost" id = "tagBtParaCrono">Parar</button>
+    <button class = "btCrono" id = "tagBtCancelaCrono">Cancelar</button>
+</div>
+
+</div>
+
+
+    <div id = "caixaUrl">
+        <fieldset>
+            <legend><span id = "tagTxtUrlNovaJanela">Url da nova janela</span></legend>    
+            <input type = "url" id = "tagNovaUrl" required />
+        </fieldset>
+        <button id = "tagBtSalvaUrl"><span id = "tagTxtBtSalvaUrl">Salvar Url</span></button>
+       
+    </div>
+  
+
+<audio id = "tagAlarme" src = "_media/alarme.mp3" loop = "true"></audio>
+
+</div>
+
+<script src = "_javascript/script.js"></script>    
+</body>
+</html>
